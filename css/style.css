@@ -404,9 +404,6 @@
   color: #ffffff;
 }
 .banner__read-more-btn {
-  -webkit-transition: opacity 0.25s ease-in;
-  transition: opacity 0.25s ease-in;
-  /* stylelint-disable-next-line plugin/selector-bem-pattern */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,11 +423,23 @@
   text-decoration: none;
   color: #ffffff;
 }
-.banner__read-more-btn:hover {
-  opacity: 0.65;
-}
 .banner__read-more-btn:visited {
   color: #ffffff;
+}
+.banner__read-more-btn:hover {
+  position: relative;
+}
+.banner__read-more-btn:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: calc((100% - 128px) / 2);
+  bottom: 9px;
+  width: 128px;
+  height: 2px;
+  background-color: #ffffff;
+  -webkit-animation: zoomIn 0.3s linear;
+          animation: zoomIn 0.3s linear;
 }
 .banner__img {
   width: 560px;
@@ -492,9 +501,6 @@
   color: #959595;
 }
 .progress__create-btn {
-  -webkit-transition: opacity 0.25s ease-in;
-  transition: opacity 0.25s ease-in;
-  /* stylelint-disable-next-line plugin/selector-bem-pattern */
   background-image: url(../img/sprite-png.png);
   background-position: 0px 0px;
   width: 469px;
@@ -518,8 +524,23 @@
   text-decoration: none;
   cursor: pointer;
 }
+.progress__create-btn:visited {
+  color: #ffffff;
+}
 .progress__create-btn:hover {
-  opacity: 0.65;
+  position: relative;
+}
+.progress__create-btn:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: calc((100% - 360px) / 2);
+  bottom: 22px;
+  width: 360px;
+  height: 3px;
+  background-color: #ffffff;
+  -webkit-animation: zoomIn 0.35s linear;
+          animation: zoomIn 0.35s linear;
 }
 .progress__create-btn::-moz-selection {
   background-color: rgba(255, 255, 255, 0);
@@ -708,4 +729,6 @@
 }
 @-webkit-keyframes fadeIn {from {opacity: 0;}to {opacity: 1;}}
 @keyframes fadeIn {from {opacity: 0;}to {opacity: 1;}}
+@-webkit-keyframes zoomIn {from {opacity: 0;-webkit-transform: scale3d(.3, .3, .3);transform: scale3d(.3, .3, .3);}50% {opacity: 1;}}
+@keyframes zoomIn {from {opacity: 0;-webkit-transform: scale3d(.3, .3, .3);transform: scale3d(.3, .3, .3);}50% {opacity: 1;}}
 /*# sourceMappingURL=style.css.map */
