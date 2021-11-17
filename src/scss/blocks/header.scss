@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: $screen-lg;
+  min-height: 126px;
+  margin: 0 auto;
+  padding: 0 $padding-lg;
+  background-color: $white-color;
+
+  &__logo-link {
+    text-transform: none;
+  }
+
+  &__logo-img {
+    width: 175px;
+    height: auto;
+  }
+}

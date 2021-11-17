@@ -1,0 +1,68 @@
+extends ../pug/layout.pug
+
+block meta
+  title Pizza | Create Your Own Pizza
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+block header
+  header.header
+    a.header__logo-link(href="/")
+      img.header__logo-img(src="/img/logo.png", alt="Pizza Logo")
+    nav.main-nav
+      ul.main-nav__list
+        li.main-nav__item
+          a.main-nav__link(href="#") Newsletter
+        li.main-nav__item
+          a.main-nav__link(href="#") Community
+        li.main-nav__item
+          a.main-nav__link(href="#") Shop
+        li.main-nav__item
+          a.main-nav__link(href="#") Contact Us
+
+block content
+  main
+    section.banner
+      .banner__text-wrapper
+        h2.banner__title Create Your Own Pizza
+        p.banner__text Lorem Ipsum is simply dummy text of&nbsp;the&nbsp;printing and&nbsp;typesetting industry. Lorem Ipsum has been the&nbsp;industry's standard dummy since the&nbsp;1500s.
+        a.banner__read-more-btn(href="#") Read more
+      img.banner__img(src="/img/pizza.png", alt="Create Your Own Pizza")
+
+    section.progress
+      h2.progress__title HOW TO PROGRESS?
+      p.progress__subtitle Lorem Ipsum is simply dummy text of the printing and typesettin
+
+      menu.progress-menu
+        ul.progress-menu__list
+          li.progress-menu__item
+            a.progress-menu__link.progress-menu__link--active(href="#") pizza cartoon
+          li.progress-menu__item
+            a.progress-menu__link(href="#") Burger
+          li.progress-menu__item
+            a.progress-menu__link(href="#") sandwich
+          li.progress-menu__item
+            a.progress-menu__link(href="#") LOREMISPSUM
+
+      .progress-steps
+        ul.progress-steps__list
+          li.progress-steps__item
+            h4.progress-steps__item-subhead CREATE IT
+            p.progress-steps__item-text Choose from a selection of tastilicious toppings to create your own pizza
+          li.progress-steps__item
+            h4.progress-steps__item-subhead NAME IT
+            p.progress-steps__item-text Choose from a selection of tastilicious toppings to create your own pizza
+          li.progress-steps__item
+            h4.progress-steps__item-subhead FAME IT
+            p.progress-steps__item-text Choose from a selection of tastilicious toppings to create your own pizza
+
+      a.progress__create-btn CREATE YOUR LEGEND
+
+block footer
+  footer.footer
+    .footer__copyright &copy; 2020 Graphic Resources. All rights reserved.
+
+//- block append page-bottom
+//-   script(src='js/some.js')

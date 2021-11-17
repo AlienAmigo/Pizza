@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 106px;
+  background: url("../img/footer-bg.png") no-repeat center / cover;
+
+  &__copyright {
+    max-width: $screen-lg;
+    font-size: 20px;
+    color: $white-color;
+  }
+}

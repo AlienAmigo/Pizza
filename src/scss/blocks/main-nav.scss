@@ -1,0 +1,42 @@
+.main-nav {
+  display: flex;
+  flex-direction: row;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 46px;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    font-family: $ff-montserrat;
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: $text-color;
+
+    &:not(:last-of-type) {
+      &::before {
+        @include pseudo();
+        top: 50%;
+        right: -24px;
+        width: 2px;
+        height: 16px;
+        background-color: $text-color;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &:visited {
+      color: $text-color;
+    }
+  }
+}
