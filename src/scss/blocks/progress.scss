@@ -41,7 +41,7 @@
   }
 
   &__create-btn {
-    @include hover();
+    // @include hover();
     @include sprite($create-btn);
     display: flex;
     align-items: center;
@@ -55,6 +55,24 @@
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
+
+    &:visited {
+      color: $white-color;
+    }
+
+    &:hover {
+      position: relative;
+
+      &::before {
+        @include pseudo();
+        left: calc((100% - 360px) / 2);
+        bottom: 22px;
+        width: 360px;
+        height: 3px;
+        background-color: $white-color;
+        animation: zoomIn 0.35s linear;
+      }
+    }
 
     &::selection {
       background-color: $transparent-color;

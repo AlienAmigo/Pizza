@@ -26,7 +26,6 @@
   }
 
   &__read-more-btn {
-    @include hover();
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,6 +41,20 @@
 
     &:visited {
       color: $white-color;
+    }
+
+    &:hover {
+      position: relative;
+
+      &::before {
+        @include pseudo();
+        left: calc((100% - 128px) / 2);
+        bottom: 9px;
+        width: 128px;
+        height: 2px;
+        background-color: $white-color;
+        animation: zoomIn 0.3s linear;
+      }
     }
   }
 
