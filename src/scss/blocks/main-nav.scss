@@ -37,6 +37,7 @@
     display: inline-flex;
     text-decoration: none;
     transition: color 0.25s ease-in;
+    color: $gray-medium;
 
     &::selection {
       background-color: $transparent-color;
