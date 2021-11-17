@@ -1,6 +1,8 @@
 # HTML / CSS Pizza PageLayout
-
 #### desktop only (> 1200px)
+
+###### ссылка на github: https://alienamigo.github.io/Pizza/
+
 ---
 ## О сборке:
 ### в составе:
