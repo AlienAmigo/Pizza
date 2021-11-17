@@ -2,7 +2,7 @@
   display: flex;
   width: 100vw;
   min-height: 765px;
-  background: url("../img/bg.png") no-repeat center / cover;
+  background: url('../img/bg.png') no-repeat center / cover;
 
   &__text-wrapper {
     width: 615px;
@@ -26,6 +26,7 @@
   }
 
   &__read-more-btn {
+    @include hover();
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,9 +46,9 @@
   }
 
   &__img {
-    margin: 49px 0 0 30px;
     width: 560px;
     height: 578px;
+    margin: 49px 0 0 30px;
     object-fit: contain;
   }
 }

@@ -2,18 +2,40 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  left: 0;
   width: $screen-lg;
   min-height: 126px;
   margin: 0 auto;
   padding: 0 $padding-lg;
   background-color: $white-color;
 
+  &::before {
+    @include pseudo();
+    z-index: -2;
+    top: 0;
+    left: calc((100% - 100vw) / 2);
+    width: 100vw;
+    height: 100%;
+    background-color: $white-color;
+  }
+
   &__logo-link {
     text-transform: none;
+
+    &::selection {
+      background-color: $transparent-color;
+    }
   }
 
   &__logo-img {
     width: 175px;
     height: auto;
+
+    &::selection {
+      background-color: $transparent-color;
+    }
   }
 }

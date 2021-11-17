@@ -1,3 +1,63 @@
 .progress {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-color: $gray-light;
 
+  &__title {
+    display: inline-flex;
+    align-items: baseline;
+    position: relative;
+    max-width: $screen-lg;
+    margin: 120px auto 20px;
+    font-family: $ff-montserrat;
+    font-size: 45px;
+    font-weight: 900;
+    color: $gray-dark;
+
+    &::before {
+      @include pseudo('block', 'relative', '');
+      width: 102px;
+      height: 28px;
+      margin-right: 28px;
+      background: url('../img/twirl-left.svg') no-repeat center / contain;
+    }
+
+    &::after {
+      @include pseudo('block', 'relative', '');
+      width: 102px;
+      height: 28px;
+      margin-left: 28px;
+      background: url('../img/twirl-right.svg') no-repeat center / contain;
+    }
+  }
+
+  &__subtitle {
+    max-width: $screen-lg;
+    margin: 0 auto 45px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #959595;
+  }
+
+  &__create-btn {
+    @include hover();
+    @include sprite($create-btn);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 95px;
+    font-family: $ff-montserrat;
+    font-size: 30px;
+    line-height: 24px;
+    font-weight: 600;
+    color: $white-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+
+    &::selection {
+      background-color: $transparent-color;
+    }
+  }
 }

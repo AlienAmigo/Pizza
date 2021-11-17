@@ -1,6 +1,7 @@
 @import 'fonts';
 @import 'variables';
 @import 'mixins';
+@import 'sprite-png';
 
 @import 'blocks/page';
 @import 'blocks/popup';
@@ -8,3 +9,6 @@
 @import 'blocks/header';
 @import 'blocks/main-nav';
 @import 'blocks/banner';
+@import 'blocks/progress';
+@import 'blocks/progress-menu';
+@import 'blocks/progress-steps';

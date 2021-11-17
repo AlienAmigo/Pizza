@@ -4,9 +4,6 @@ block meta
   title Pizza | Create Your Own Pizza
   meta(name='description', content='')
 
-//- block append head
-//-   link(rel='stylesheet', href='css/some.css')
-
 block header
   header.header
     a.header__logo-link(href="/")
@@ -58,11 +55,8 @@ block content
             h4.progress-steps__item-subhead FAME IT
             p.progress-steps__item-text Choose from a selection of tastilicious toppings to create your own pizza
 
-      a.progress__create-btn CREATE YOUR LEGEND
+      a.progress__create-btn(href="#") CREATE YOUR LEGEND
 
 block footer
   footer.footer
     .footer__copyright &copy; 2020 Graphic Resources. All rights reserved.
-
-//- block append page-bottom
-//-   script(src='js/some.js')

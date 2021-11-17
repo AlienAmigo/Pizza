@@ -6,8 +6,8 @@ let config = {
   // флаги, если нужно отключить какую-то часть сборки (например, в случае полной ненадобности js или сторонних модулей (Vendors))
   options: {
     copyAssets: false,
-    processJs: true,
-    copyJsVendors: true,
+    processJs: false,
+    copyJsVendors: false,
   },
 
   // переменные директорий проекта

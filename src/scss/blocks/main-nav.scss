@@ -17,26 +17,37 @@
     font-weight: 600;
     font-size: 17px;
     text-transform: uppercase;
-    color: $text-color;
+    color: $gray-medium;
 
     &:not(:last-of-type) {
+
       &::before {
         @include pseudo();
         top: 50%;
         right: -24px;
         width: 2px;
         height: 16px;
-        background-color: $text-color;
+        background-color: $gray-medium;
         transform: translateY(-50%);
       }
     }
   }
 
   &__link {
+    display: inline-flex;
     text-decoration: none;
+    transition: color 0.25s ease-in;
+
+    &::selection {
+      background-color: $transparent-color;
+    }
 
     &:visited {
-      color: $text-color;
+      color: $gray-medium;
+    }
+
+    &:hover {
+      color: $main-color;
     }
   }
 }
